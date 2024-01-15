@@ -9,5 +9,9 @@ export const Counter: React.FC<CounterProps> = ({ counterValue, onCounterValueCh
     onCounterValueChanged(newValue);
   };
 
-  return <button onClick={increment}>{counterValue}</button>;
+  return (
+    <button onClick={increment}>
+      <span>{counterValue}</span>
+    </button>
+  );
 };
