@@ -1,17 +1,13 @@
-export interface CounterProps {
-  counterValue: number; // child -> parent
-  onCounterValueChanged: (newValue: number) => void; // parent -> child
-}
+import { useCounter } from '../domain/counter/CounterContext';
 
-export const Counter: React.FC<CounterProps> = ({ counterValue, onCounterValueChanged }) => {
-  const increment = () => {
-    const newValue = counterValue + 1;
-    onCounterValueChanged(newValue);
-  };
+export interface CounterProps {}
+
+export const Counter: React.FC<CounterProps> = () => {
+  const { value, inc } = useCounter();
 
   return (
-    <button onClick={increment}>
-      <span>{counterValue}</span>
+    <button onClick={inc}>
+      <span>{value}</span>
     </button>
   );
 };

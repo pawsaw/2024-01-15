@@ -1,20 +1,26 @@
 import { useCallback, useState } from 'react';
 import { Book } from '../../../domain/books/Book';
 import { Hideable } from '../../Hideable';
+import { useTheme } from '../../../domain/theme/ThemeContext';
 
 export interface BookListItemProps {
   book: Book;
+  onBookClicked?: (book: Book) => void;
 }
 
-export const BookListItem: React.FC<BookListItemProps> = ({ book }) => {
+export const BookListItem: React.FC<BookListItemProps> = ({ book, onBookClicked }) => {
   const [numLikes, setNumLikes] = useState(0);
   const incNumLikes = useCallback(() => {
     setNumLikes(numLikes + 1);
   }, [numLikes]);
 
+  const theme = useTheme();
+
   return (
     <div>
-      <span>{book.title}</span>
+      <span style={{ color: theme.primaryColor }} onClick={() => onBookClicked?.(book)}>
+        {book.title}
+      </span>
       <button onClick={incNumLikes}>
         <span>👏</span>
         <span>{numLikes}</span>
