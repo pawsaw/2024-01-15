@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './domain/theme/ThemeContext';
 import { CounterProvider } from './domain/counter/CounterContext';
+import { router } from './router';
+import { RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -16,7 +18,7 @@ root.render(
       }}
     >
       <CounterProvider>
-        <App />
+        <RouterProvider router={router} />
       </CounterProvider>
     </ThemeProvider>
   </React.StrictMode>,
