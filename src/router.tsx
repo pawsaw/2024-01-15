@@ -1,7 +1,7 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import App from './App';
 import { ErrorScreen } from './screens/ErrorScreen';
-import { BooksScreen } from './screens/BooksScreen';
+import { BooksScreen } from './screens/BookScreen';
 import { AboutScreen } from './screens/AboutScreen';
 
 export const router = createBrowserRouter([

@@ -1,5 +1,5 @@
-import { Book } from '../../domain/books/Book';
-import { ThemeProvider } from '../../domain/theme/ThemeContext';
+import { Book } from '../../../domain/books/Book';
+import { ThemeProvider } from '../../../domain/theme/ThemeContext';
 import { BookListItem } from './BookListItem/BookListItem';
 
 export interface BookListProps {

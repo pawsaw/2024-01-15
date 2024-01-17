@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
-import { Book } from '../../../domain/books/Book';
-import { Hideable } from '../../Hideable';
-import { useTheme } from '../../../domain/theme/ThemeContext';
+import { Book } from '../../../../domain/books/Book';
+import { Hideable } from '../../../../components/Hideable';
+import { useTheme } from '../../../../domain/theme/ThemeContext';
 
 export interface BookListItemProps {
   book: Book;

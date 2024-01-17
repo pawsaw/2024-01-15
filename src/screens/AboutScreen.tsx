@@ -1,7 +1,7 @@
 export const AboutScreen: React.FC = () => {
   return (
     <div className="about-screen">
-      <h1>About</h1>
+      <h2>About</h2>
     </div>
   );
 };
