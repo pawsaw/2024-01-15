@@ -13,11 +13,7 @@ export const BooksScreen: React.FC = () => {
         <button style={{ color: theme.primaryColor }} onClick={reload}>
           Reload books
         </button>
-        {books ? (
-          <BookList books={books} onBookClicked={(book) => alert(book.price)} />
-        ) : (
-          <span>Loading books ... </span>
-        )}
+        {books ? <BookList books={books} /> : <span>Loading books ... </span>}
       </div>
     </div>
   );

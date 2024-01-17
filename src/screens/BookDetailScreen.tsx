@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Book, useBook } from '../domain/books';
 
 export const BookDetailScreen: React.FC = () => {
@@ -10,6 +10,9 @@ export const BookDetailScreen: React.FC = () => {
       {book ? (
         <span>
           <h2>{book.title}</h2>
+          <Link to="edit">
+            <button>edit</button>
+          </Link>
         </span>
       ) : (
         <span>Loading book...</span>

@@ -4,10 +4,9 @@ import { BookListItem } from './BookListItem/BookListItem';
 
 export interface BookListProps {
   books: Book[];
-  onBookClicked: (book: Book) => void;
 }
 
-export const BookList: React.FC<BookListProps> = ({ books, onBookClicked }) => {
+export const BookList: React.FC<BookListProps> = ({ books }) => {
   return (
     <ThemeProvider
       theme={{
@@ -17,7 +16,7 @@ export const BookList: React.FC<BookListProps> = ({ books, onBookClicked }) => {
     >
       <div>
         {books.map((book) => (
-          <BookListItem key={book.id} book={book} onBookClicked={onBookClicked} />
+          <BookListItem key={book.id} book={book} />
         ))}
       </div>
     </ThemeProvider>
